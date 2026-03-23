@@ -56,3 +56,41 @@ class WondrHomePage extends StatelessWidget {
           ),
         ],
       ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Header Profil
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Row(
+                    children: [
+                      CircleAvatar(
+                        radius: 20,
+                        backgroundColor: Colors.orangeAccent,
+                        child: Icon(Icons.person, color: Colors.white),
+                      ),
+                      SizedBox(width: 12),
+                      Text(
+                        "Hai, Karnisa!",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      const Icon(Icons.notifications_none, size: 28),
+                      const SizedBox(width: 16),
+                      const Icon(Icons.book_outlined, size: 28),
+                      const SizedBox(width: 16),
+                      const Icon(Icons.grid_view_rounded, size: 28),
+                    ],
+                  ),
+                ],
+              ),
