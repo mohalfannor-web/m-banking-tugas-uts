@@ -94,3 +94,38 @@ class WondrHomePage extends StatelessWidget {
                   ),
                 ],
               ),
+                            const SizedBox(height: 24),
+
+              // Tab Selector
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey.shade100,
+                  borderRadius: BorderRadius.circular(25),
+                ),
+                child: Row(
+                  children: [
+                    _buildTab("Insights", false),
+                    _buildTab("Transaksi", true),
+                    _buildTab("Growth", false),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 24),
+
+              // Rekening Seksi
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    "Rekening transaksi kamu",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  Text(
+                    "Lihat semua",
+                    style: TextStyle(
+                      color: Colors.orange.shade800,
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
+              ),
