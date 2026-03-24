@@ -129,3 +129,57 @@ class WondrHomePage extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 12),
+
+              // Card Saldo
+              Row(
+                children: [
+                  Container(
+                    width: 60,
+                    height: 140,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFB2EBF2),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: const Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.history, color: Colors.black),
+                        SizedBox(height: 8),
+                        Text(
+                          "Lihat\nAset",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Container(
+                      height: 140,
+                      padding: const EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          colors: [Color(0xFFFF9800), Color(0xFFFFCC80)],
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                        ),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              const Text(
+                                "BNI Taplus\n0223383830",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
