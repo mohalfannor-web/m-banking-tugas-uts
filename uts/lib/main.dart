@@ -183,3 +183,65 @@ class WondrHomePage extends StatelessWidget {
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
+                              Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 4,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: const Text(
+                                  "UTAMA",
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const Spacer(),
+                          const Text(
+                            "Total saldo",
+                            style: TextStyle(fontSize: 12),
+                          ),
+                          const Row(
+                            children: [
+                              Text(
+                                "Rp2.800.000.000",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(width: 8),
+                              Icon(Icons.visibility_off_outlined, size: 18),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 24),
+
+              // Fitur Pilihan
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    "Fitur pilihan kamu",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  Text(
+                    "Atur",
+                    style: TextStyle(
+                      color: Colors.orange.shade800,
+                      fontSize: 14,
+                    ),
+                  ),
+                ],
+              ),
