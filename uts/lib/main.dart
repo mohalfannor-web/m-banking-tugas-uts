@@ -75,7 +75,7 @@ class WondrHomePage extends StatelessWidget {
                       ),
                       SizedBox(width: 12),
                       Text(
-                        "Hai, Karnisa!",
+                        "Hai, Alfann!",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
@@ -94,7 +94,7 @@ class WondrHomePage extends StatelessWidget {
                   ),
                 ],
               ),
-                            const SizedBox(height: 24),
+              const SizedBox(height: 24),
 
               // Tab Selector
               Container(
@@ -245,3 +245,106 @@ class WondrHomePage extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 16),
+              GridView.count(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                crossAxisCount: 3,
+                mainAxisSpacing: 16,
+                children: [
+                  _buildMenuIcon(
+                    Icons.send_rounded,
+                    "Transfer",
+                    const Color(0xFF80CBC4),
+                  ),
+                  _buildMenuIcon(Icons.payment, "Tapcash", Colors.orangeAccent),
+                  _buildMenuIcon(
+                    Icons.receipt_long,
+                    "Bayar & Beli",
+                    const Color(0xFF9FA8DA),
+                  ),
+                  _buildMenuIcon(
+                    Icons.account_balance_wallet,
+                    "E-Wallet",
+                    const Color(0xFF80DEEA),
+                  ),
+                  _buildMenuIcon(
+                    Icons.add_box_outlined,
+                    "Virtual Account",
+                    const Color(0xFF80CBC4),
+                  ),
+                  _buildMenuIcon(
+                    Icons.public,
+                    "Transfer Luar Negeri",
+                    const Color(0xFF80DEEA),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: Container(
+        height: 50,
+        width: 100,
+        decoration: BoxDecoration(
+          color: Colors.black,
+          borderRadius: BorderRadius.circular(25),
+        ),
+        child: const Center(
+          child: Text(
+            "QRIS",
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildTab(String label, bool isActive) {
+    return Expanded(
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 10),
+        decoration: BoxDecoration(
+          color: isActive ? const Color(0xFFD4E157) : Colors.transparent,
+          borderRadius: BorderRadius.circular(25),
+        ),
+        child: Center(
+          child: Text(
+            label,
+            style: TextStyle(
+              fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
+              color: Colors.black,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildMenuIcon(IconData icon, String label, Color color) {
+    return Column(
+      children: [
+        Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: color,
+            borderRadius: BorderRadius.circular(16),
+          ),
+          child: Icon(icon, color: Colors.black87),
+        ),
+        const SizedBox(height: 8),
+        Text(
+          label,
+          textAlign: TextAlign.center,
+          style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+        ),
+      ],
+    );
+  }
+}
